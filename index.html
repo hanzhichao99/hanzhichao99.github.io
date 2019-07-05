@@ -398,7 +398,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Alvabill</span><br><span class="line">subtitle: Stay Hungry, Stay Foolish</span><br><span class="line">author: Alvabill</span><br><span class="line">description: &quot;Alvabill个人站，主要涉及前端知识共享、实践教程、前沿技术共同学习等方面&quot;  #网站描述 SEO</span><br><span class="line">language: en</span><br><span class="line">timezone: Asia/Shanghai</span><br></pre></td></tr></table></figure>
 
 <p>“title”：博客的名称。<br> “subtitle”：根据主题的不同，有的会显示有的不会显示。<br> “description”：主要用于SEO，告诉搜索引擎一个关于站点的简单描述，通常建议在其中包含网站的关键词。<br> “author”：作者名称，用于主题显示文章的作者。<br> “language”：语言会对应的解析正在应用的主题中的languages文件夹下的不同语言文件。所以这里的名称要和languages文件夹下的语言文件名称一致。<br> “timezone”：可不填写。</p>
-<h3 id="添加-分类及标签及关于页面"><a href="#添加-分类及标签及关于页面" class="headerlink" title="添加  分类及标签及关于页面"></a>添加  分类及标签及关于页面</h3><h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><h5 id="生成分类页并添加分类属性"><a href="#生成分类页并添加分类属性" class="headerlink" title="生成分类页并添加分类属性"></a>生成分类页并添加分类属性</h5><p>命令行blog目录下执行：</p>
+<h2 id="添加-分类及标签及关于页面"><a href="#添加-分类及标签及关于页面" class="headerlink" title="添加  分类及标签及关于页面"></a>添加  分类及标签及关于页面</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a><strong>分类</strong></h3><p><strong>生成分类页并添加分类属性</strong></p>
+<p>命令行blog目录下执行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
 
 <p>成功后提示：</p>
@@ -408,7 +409,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-07-05 13:24:49</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
 
 <p>保存关闭</p>
-<h5 id="给文章添加”categories”属性"><a href="#给文章添加”categories”属性" class="headerlink" title="给文章添加”categories”属性"></a>给文章添加”categories”属性</h5><p>打开需要添加分类的文章，添加categories属性。</p>
+<p><strong>给文章添加”categories”属性</strong></p>
+<p>打开需要添加分类的文章，添加categories属性。</p>
 <p>两种写法：</p>
 <ol>
 <li><p>categories: 分类名       这种写法可以生成一种分类</p>
@@ -424,7 +426,8 @@
 
 
 
-<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><h5 id="生成标签页并添加标签属性"><a href="#生成标签页并添加标签属性" class="headerlink" title="生成标签页并添加标签属性"></a>生成标签页并添加标签属性</h5><p>命令行blog目录下执行：</p>
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p><strong>生成标签页并添加标签属性</strong></p>
+<p>命令行blog目录下执行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
 
 <p>成功后提示：</p>
@@ -434,7 +437,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2019-07-05 13:40:54</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
 
 <p>保存关闭文件</p>
-<h5 id="给文章添加”tags“属性"><a href="#给文章添加”tags“属性" class="headerlink" title="给文章添加”tags“属性"></a>给文章添加”tags“属性</h5><p>打开需要添加分类的文章，添加tags属性。(默认有tags)</p>
+<p><strong>给文章添加”tags“属性</strong></p>
+<p>打开需要添加分类的文章，添加tags属性。(默认有tags)</p>
 <p>两种写法: </p>
 <p>1.tags: 标签名                                                             #此文章对应一个标签</p>
 <p>2.tags:</p>
@@ -449,14 +453,16 @@
 <p>这两个的设置几乎一模一样</p>
 <p>我们可以打开scaffolds/post.md文件，在tages:上面加入categories:,保存后，之后执行<code>hexo new 文章名</code>命令生成的文件，页面里就有<code>categories:</code>项了。</p>
 <p>scaffolds目录下，是新建页面的模板，执行新建命令时，是根据这里的模板页来完成的，所以可以在这里根据你自己的需求添加一些默认值。</p>
-<h4 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h4><h5 id="生成标签页并添加标签属性-1"><a href="#生成标签页并添加标签属性-1" class="headerlink" title="生成标签页并添加标签属性"></a>生成标签页并添加标签属性</h5><p>命令行blog目录下执行：</p>
+<h3 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h3><p><strong>生成标签页并添加标签属性</strong></p>
+<p>命令行blog目录下执行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
 
 <p>成功后提示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: ~/Documents/blog/source/about/index.md</span><br></pre></td></tr></table></figure>
 
-<p>根据上面的路径，找到<code>index.md</code>这个文件，打开后修改为</p>
-<h2 id="给next主题加首歌"><a href="#给next主题加首歌" class="headerlink" title="给next主题加首歌"></a>给next主题加首歌</h2><h3 id="获取外链"><a href="#获取外链" class="headerlink" title="获取外链"></a><strong>获取外链</strong></h3><p>在网页版网易云查找歌曲，点击图标下面 生成外链播放器</p>
+<p>根据上面的路径，找到<code>index.md</code>这个文件，打开后修改，自定义页面</p>
+<h2 id="给next主题加首歌"><a href="#给next主题加首歌" class="headerlink" title="给next主题加首歌"></a>给next主题加首歌</h2><p>获取外链</p>
+<p>在网页版网易云查找歌曲，点击图标下面 生成外链播放器</p>
 <img src="/2019/07/05/next美化/001.png" title="image 001">
 
 <p>点击后进入这个页面</p>
@@ -464,19 +470,23 @@
 
 
 
-<h3 id="修改-themes-next-layout-macro-sidebar-swig文件"><a href="#修改-themes-next-layout-macro-sidebar-swig文件" class="headerlink" title="修改 themes/next/layout/_macro/sidebar.swig文件"></a>修改 themes/next/layout/_macro/sidebar.swig文件</h3><p>在<strong>114行</strong>添加音乐播放器代码：</p>
+<p><strong>修改 themes/next/layout/_macro/sidebar.swig文件</strong></p>
+<p>在<strong>114行</strong>添加音乐播放器代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">       &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=210 height=110 src=&quot;//music.163.com/outchain/player?type=0&amp;id=2870775476&amp;auto=1&amp;height=66&quot;&gt;</span><br><span class="line">       &lt;/iframe&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="如何给next博客添加图片"><a href="#如何给next博客添加图片" class="headerlink" title="如何给next博客添加图片"></a>如何给next博客添加图片</h2><h3 id="正确的图片插入方法"><a href="#正确的图片插入方法" class="headerlink" title="正确的图片插入方法"></a>正确的图片插入方法</h3><p>配置<code>_config.yml</code>里面的<code>post_asset_folder:false</code>这个选项设置为<code>true</code>。</p>
+<h2 id="如何给next博客添加图片"><a href="#如何给next博客添加图片" class="headerlink" title="如何给next博客添加图片"></a>如何给next博客添加图片</h2><p><strong>正确的图片插入方法</strong></p>
+<p>配置<code>_config.yml</code>里面的<code>post_asset_folder:false</code>这个选项设置为<code>true</code>。</p>
 <p>执行：</p>
 <p>npm install <a href="https://github.com/7ym0n/hexo-asset-image" target="_blank" rel="noopener">https://github.com/7ym0n/hexo-asset-image</a> –save</p>
 <p>生成md博文时，<code>/source/_posts</code>文件夹内除了xxxx.md文件还有一个同名的文件夹，把图片放入该文件夹。</p>
 <p>使用直接插入图片即可。</p>
-<h2 id="添加侧边栏头像"><a href="#添加侧边栏头像" class="headerlink" title="添加侧边栏头像"></a>添加侧边栏头像</h2><h4 id="添加头像"><a href="#添加头像" class="headerlink" title="添加头像"></a>添加头像</h4><p><strong>主题配置文件</strong>中找到avatar字段把图片路径写在下面</p>
+<h2 id="添加侧边栏头像"><a href="#添加侧边栏头像" class="headerlink" title="添加侧边栏头像"></a>添加侧边栏头像</h2><p><strong>添加头像</strong></p>
+<p><strong>主题配置文件</strong>中找到avatar字段把图片路径写在下面</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line"># in theme directory(source/images): /images/avatar.gif</span><br><span class="line"># in site  directory(source/uploads): /uploads/avatar.gif</span><br><span class="line">avatar: /images/avatar.JPG</span><br></pre></td></tr></table></figure>
 
 <p><strong>我的图片存放路径</strong>: blog/themes/next/source/images/avatar.JPG</p>
-<h4 id="设置侧边栏头像圆形显示"><a href="#设置侧边栏头像圆形显示" class="headerlink" title="设置侧边栏头像圆形显示"></a>设置侧边栏头像圆形显示</h4><p>找到<strong>主题配置文件</strong>：</p>
+<p><strong>设置侧边栏头像圆形显示</strong></p>
+<p>找到<strong>主题配置文件</strong>：</p>
 <p>打开  /themes/next/source/css/_common/components/sidebar/sidebar-author.styl</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.site-author-image &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  padding: $site-author-image-padding;</span><br><span class="line">  max-width: $site-author-image-width;</span><br><span class="line">  height: $site-author-image-height;</span><br><span class="line">  border: $site-author-image-border-width solid $site-author-image-border-color;</span><br><span class="line">  </span><br><span class="line">  /*圆形头像*/</span><br><span class="line">  border-radius: 80px;</span><br><span class="line">  -webkit-border-radius: 80px;</span><br><span class="line">  -moz-border-radius: 80px;</span><br><span class="line">  box-shadow: inset 0 -1px 0 #333sf;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -505,10 +515,12 @@
 <p>4.在站点的 _config.yml 下添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-haruto</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
 
-<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="图片插入博客无法显示问题"><a href="#图片插入博客无法显示问题" class="headerlink" title="图片插入博客无法显示问题"></a>图片插入博客无法显示问题</h3><h4 id="踩的坑"><a href="#踩的坑" class="headerlink" title="踩的坑"></a>踩的坑</h4><p>在摸索出正确的方法前，踩了不少的坑</p>
+<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="图片插入博客无法显示问题"><a href="#图片插入博客无法显示问题" class="headerlink" title="图片插入博客无法显示问题"></a>图片插入博客无法显示问题</h3><p><strong>踩的坑</strong></p>
+<p>在摸索出正确的方法前，踩了不少的坑</p>
 <p>1.插件版本安装错误（正确的插入也无法显示）</p>
 <p>2.使用markdown插入图片（插件版本正确，插入方式错误）</p>
-<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>错误原因：由于hexo3版本后对很多插件支持有问题，<a href="https://github.com/CodeFalling/hexo-asset-image.git" target="_blank" rel="noopener">hexo-asset-image</a>插件在处理<code>data.permalink</code>链接时出现路径错误，把年月去掉了，导致最后生成的路径为<code>%d/xxx/xxx</code>需要对其做兼容处理。</p>
+<p><strong>解决办法</strong></p>
+<p>错误原因：由于hexo3版本后对很多插件支持有问题，<a href="https://github.com/CodeFalling/hexo-asset-image.git" target="_blank" rel="noopener">hexo-asset-image</a>插件在处理<code>data.permalink</code>链接时出现路径错误，把年月去掉了，导致最后生成的路径为<code>%d/xxx/xxx</code>需要对其做兼容处理。</p>
 <p><em>1.</em></p>
 <p>直接安装已经修改过得插件<code>npm install https://github.com/7ym0n/hexo-asset-image --save</code>。</p>
 <p> <em>2.</em></p>
