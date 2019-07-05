@@ -91,7 +91,9 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/004.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/001.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/002.png">
-<meta property="og:updated_time" content="2019-07-05T06:29:26.425Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/005.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/006.png">
+<meta property="og:updated_time" content="2019-07-05T17:22:37.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="next主题美化及功能添加">
 <meta name="twitter:description" content="开启 动态背景目前NexT主题最新的是V6.0版本，这个版本中可以有4种动态背景：  Canvas-nest        /最爱 three_waves canvas_lines canvas_sphere  设置方法也很简单，直接设置里需要的动态背景为true。 配置菜单栏站点配置blog/_config.yml文件的基本配置 1234567# Sitetitle: Alvabillsubti">
@@ -341,6 +343,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
 
           
 
@@ -447,16 +480,36 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line"># in theme directory(source/images): /images/avatar.gif</span><br><span class="line"># in site  directory(source/uploads): /uploads/avatar.gif</span><br><span class="line">avatar: /images/avatar.JPG</span><br></pre></td></tr></table></figure>
 
 <p><strong>我的图片存放路径</strong>: blog/themes/next/source/images/avatar.JPG</p>
-<h4 id="设置圆形头像并旋转"><a href="#设置圆形头像并旋转" class="headerlink" title="设置圆形头像并旋转"></a>设置圆形头像并旋转</h4><p>（未实现）</p>
-<p>找到<strong>主题配置文件</strong>：</p>
+<h4 id="设置侧边栏头像圆形显示"><a href="#设置侧边栏头像圆形显示" class="headerlink" title="设置侧边栏头像圆形显示"></a>设置侧边栏头像圆形显示</h4><p>找到<strong>主题配置文件</strong>：</p>
 <p>打开  /themes/next/source/css/_common/components/sidebar/sidebar-author.styl</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.site-author-image &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  padding: $site-author-image-padding;</span><br><span class="line">  max-width: $site-author-image-width;</span><br><span class="line">  height: $site-author-image-height;</span><br><span class="line">  border: $site-author-image-border-width solid $site-author-image-border-color;</span><br><span class="line">  border-radius: 60%;</span><br><span class="line">  transition: 2.5s all;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-author-image:hover &#123;</span><br><span class="line">    transform: rotate(360deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.site-author-image &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  padding: $site-author-image-padding;</span><br><span class="line">  max-width: $site-author-image-width;</span><br><span class="line">  height: $site-author-image-height;</span><br><span class="line">  border: $site-author-image-border-width solid $site-author-image-border-color;</span><br><span class="line">  </span><br><span class="line">  /*圆形头像*/</span><br><span class="line">  border-radius: 80px;</span><br><span class="line">  -webkit-border-radius: 80px;</span><br><span class="line">  -moz-border-radius: 80px;</span><br><span class="line">  box-shadow: inset 0 -1px 0 #333sf;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>但是报错！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Asset render failed: css/main.css</span><br></pre></td></tr></table></figure>
+<h2 id="实现统计功能"><a href="#实现统计功能" class="headerlink" title="实现统计功能"></a>实现统计功能</h2><p>实现效果图</p>
+<img src="/2019/07/05/next美化/005.png" title="实现效果">
 
-<p>百思不得其解</p>
-<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="markdown插入博客无法显示问题"><a href="#markdown插入博客无法显示问题" class="headerlink" title="markdown插入博客无法显示问题"></a>markdown插入博客无法显示问题</h3><h4 id="踩的坑"><a href="#踩的坑" class="headerlink" title="踩的坑"></a>踩的坑</h4><p>在摸索出正确的方法前，踩了不少的坑</p>
+<p>具体方法</p>
+<p>1.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+
+<p>2.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="给自己的博客添加萌宠或者萌妹子"><a href="#给自己的博客添加萌宠或者萌妹子" class="headerlink" title="给自己的博客添加萌宠或者萌妹子"></a>给自己的博客添加萌宠或者萌妹子</h2><img src="/2019/07/05/next美化/006.png" title="效果图">
+
+<p><strong>实现方法</strong></p>
+<p>1.获取</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>2.选择</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">live2d-widget-model-chitose</span><br><span class="line">live2d-widget-model-epsilon2_1</span><br><span class="line">live2d-widget-model-gf</span><br><span class="line">live2d-widget-model-haru/01 (use npm install --save live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haru/02 (use npm install --save live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haruto</span><br><span class="line">live2d-widget-model-hibiki</span><br><span class="line">live2d-widget-model-hijiki</span><br><span class="line">live2d-widget-model-izumi</span><br><span class="line">live2d-widget-model-koharu</span><br><span class="line">live2d-widget-model-miku</span><br><span class="line">live2d-widget-model-ni-j</span><br><span class="line">live2d-widget-model-nico</span><br><span class="line">live2d-widget-model-nietzsche</span><br><span class="line">live2d-widget-model-nipsilon</span><br><span class="line">live2d-widget-model-nito</span><br><span class="line">live2d-widget-model-shizuku</span><br><span class="line">live2d-widget-model-tororo</span><br><span class="line">live2d-widget-model-tsumiki</span><br><span class="line">live2d-widget-model-unitychan</span><br><span class="line">live2d-widget-model-wanko</span><br></pre></td></tr></table></figure>
+
+<p>3.安装（例如选择 live2d-widget-model-haruto）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install live2d-widget-model-haruto</span><br></pre></td></tr></table></figure>
+
+<p>4.在站点的 _config.yml 下添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-haruto</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="图片插入博客无法显示问题"><a href="#图片插入博客无法显示问题" class="headerlink" title="图片插入博客无法显示问题"></a>图片插入博客无法显示问题</h3><h4 id="踩的坑"><a href="#踩的坑" class="headerlink" title="踩的坑"></a>踩的坑</h4><p>在摸索出正确的方法前，踩了不少的坑</p>
 <p>1.插件版本安装错误（正确的插入也无法显示）</p>
 <p>2.使用markdown插入图片（插件版本正确，插入方式错误）</p>
 <h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>错误原因：由于hexo3版本后对很多插件支持有问题，<a href="https://github.com/CodeFalling/hexo-asset-image.git" target="_blank" rel="noopener">hexo-asset-image</a>插件在处理<code>data.permalink</code>链接时出现路径错误，把年月去掉了，导致最后生成的路径为<code>%d/xxx/xxx</code>需要对其做兼容处理。</p>
@@ -651,7 +704,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启-动态背景"><span class="nav-number">1.</span> <span class="nav-text">开启 动态背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置菜单栏"><span class="nav-number">2.</span> <span class="nav-text">配置菜单栏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加-分类及标签及关于页面"><span class="nav-number">2.1.</span> <span class="nav-text">添加  分类及标签及关于页面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分类"><span class="nav-number">2.1.1.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生成分类页并添加分类属性"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">生成分类页并添加分类属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#给文章添加”categories”属性"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">给文章添加”categories”属性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签"><span class="nav-number">2.1.2.</span> <span class="nav-text">标签</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生成标签页并添加标签属性"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">生成标签页并添加标签属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#给文章添加”tags“属性"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">给文章添加”tags“属性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于"><span class="nav-number">2.1.3.</span> <span class="nav-text">关于</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生成标签页并添加标签属性-1"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">生成标签页并添加标签属性</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给next主题加首歌"><span class="nav-number">3.</span> <span class="nav-text">给next主题加首歌</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取外链"><span class="nav-number">3.1.</span> <span class="nav-text">获取外链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-themes-next-layout-macro-sidebar-swig文件"><span class="nav-number">3.2.</span> <span class="nav-text">修改 themes/next/layout/_macro/sidebar.swig文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何给next博客添加图片"><span class="nav-number">4.</span> <span class="nav-text">如何给next博客添加图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#正确的图片插入方法"><span class="nav-number">4.1.</span> <span class="nav-text">正确的图片插入方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加侧边栏头像"><span class="nav-number">5.</span> <span class="nav-text">添加侧边栏头像</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加头像"><span class="nav-number">5.0.1.</span> <span class="nav-text">添加头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置圆形头像并旋转"><span class="nav-number">5.0.2.</span> <span class="nav-text">设置圆形头像并旋转</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#问题汇总"><span class="nav-number">6.</span> <span class="nav-text">问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown插入博客无法显示问题"><span class="nav-number">6.1.</span> <span class="nav-text">markdown插入博客无法显示问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#踩的坑"><span class="nav-number">6.1.1.</span> <span class="nav-text">踩的坑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法"><span class="nav-number">6.1.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deployer-not-found-git"><span class="nav-number">6.2.</span> <span class="nav-text">Deployer not found: git</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启-动态背景"><span class="nav-number">1.</span> <span class="nav-text">开启 动态背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置菜单栏"><span class="nav-number">2.</span> <span class="nav-text">配置菜单栏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加-分类及标签及关于页面"><span class="nav-number">2.1.</span> <span class="nav-text">添加  分类及标签及关于页面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分类"><span class="nav-number">2.1.1.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生成分类页并添加分类属性"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">生成分类页并添加分类属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#给文章添加”categories”属性"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">给文章添加”categories”属性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签"><span class="nav-number">2.1.2.</span> <span class="nav-text">标签</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生成标签页并添加标签属性"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">生成标签页并添加标签属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#给文章添加”tags“属性"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">给文章添加”tags“属性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于"><span class="nav-number">2.1.3.</span> <span class="nav-text">关于</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生成标签页并添加标签属性-1"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">生成标签页并添加标签属性</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给next主题加首歌"><span class="nav-number">3.</span> <span class="nav-text">给next主题加首歌</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取外链"><span class="nav-number">3.1.</span> <span class="nav-text">获取外链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-themes-next-layout-macro-sidebar-swig文件"><span class="nav-number">3.2.</span> <span class="nav-text">修改 themes/next/layout/_macro/sidebar.swig文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何给next博客添加图片"><span class="nav-number">4.</span> <span class="nav-text">如何给next博客添加图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#正确的图片插入方法"><span class="nav-number">4.1.</span> <span class="nav-text">正确的图片插入方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加侧边栏头像"><span class="nav-number">5.</span> <span class="nav-text">添加侧边栏头像</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加头像"><span class="nav-number">5.0.1.</span> <span class="nav-text">添加头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置侧边栏头像圆形显示"><span class="nav-number">5.0.2.</span> <span class="nav-text">设置侧边栏头像圆形显示</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能"><span class="nav-number">6.</span> <span class="nav-text">实现统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给自己的博客添加萌宠或者萌妹子"><span class="nav-number">7.</span> <span class="nav-text">给自己的博客添加萌宠或者萌妹子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题汇总"><span class="nav-number">8.</span> <span class="nav-text">问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片插入博客无法显示问题"><span class="nav-number">8.1.</span> <span class="nav-text">图片插入博客无法显示问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#踩的坑"><span class="nav-number">8.1.1.</span> <span class="nav-text">踩的坑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法"><span class="nav-number">8.1.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deployer-not-found-git"><span class="nav-number">8.2.</span> <span class="nav-text">Deployer not found: git</span></a></li></ol></li></div>
             
 
           </div>
@@ -682,7 +735,8 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+<!--
+<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -691,6 +745,7 @@
 
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
 
 
 
@@ -871,5 +926,5 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
