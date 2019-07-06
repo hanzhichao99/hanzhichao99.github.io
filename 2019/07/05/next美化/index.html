@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -82,7 +89,7 @@
 <meta name="description" content="开启 动态背景目前NexT主题最新的是V6.0版本，这个版本中可以有4种动态背景：  Canvas-nest        /最爱 three_waves canvas_lines canvas_sphere  设置方法也很简单，直接设置里需要的动态背景为true。 配置菜单栏站点配置blog/_config.yml文件的基本配置 1234567# Sitetitle: Alvabillsubti">
 <meta name="keywords" content="next美化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="next主题美化及功能添加">
+<meta property="og:title" content="NexT主题美化(持续更新)">
 <meta property="og:url" content="http://yoursite.com/2019/07/05/next美化/index.html">
 <meta property="og:site_name" content="Han Kii">
 <meta property="og:description" content="开启 动态背景目前NexT主题最新的是V6.0版本，这个版本中可以有4种动态背景：  Canvas-nest        /最爱 three_waves canvas_lines canvas_sphere  设置方法也很简单，直接设置里需要的动态背景为true。 配置菜单栏站点配置blog/_config.yml文件的基本配置 1234567# Sitetitle: Alvabillsubti">
@@ -93,9 +100,10 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/002.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/005.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/006.png">
-<meta property="og:updated_time" content="2019-07-05T17:51:43.534Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/007.png">
+<meta property="og:updated_time" content="2019-07-06T09:16:47.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="next主题美化及功能添加">
+<meta name="twitter:title" content="NexT主题美化(持续更新)">
 <meta name="twitter:description" content="开启 动态背景目前NexT主题最新的是V6.0版本，这个版本中可以有4种动态背景：  Canvas-nest        /最爱 three_waves canvas_lines canvas_sphere  设置方法也很简单，直接设置里需要的动态背景为true。 配置菜单栏站点配置blog/_config.yml文件的基本配置 1234567# Sitetitle: Alvabillsubti">
 <meta name="twitter:image" content="http://yoursite.com/2019/07/05/next美化/003.png">
 
@@ -133,7 +141,7 @@
 
 
 
-  <title>next主题美化及功能添加 | Han Kii</title>
+  <title>NexT主题美化(持续更新) | Han Kii</title>
   
 
 
@@ -239,9 +247,41 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -287,7 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">next主题美化及功能添加</h1>
+          <h1 class="post-title" itemprop="name headline">NexT主题美化(持续更新)</h1>
         
 
         <div class="post-meta">
@@ -322,8 +362,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Next/" itemprop="url" rel="index">
-                    <span itemprop="name">Next</span>
+                  <a href="/categories/NexT/" itemprop="url" rel="index">
+                    <span itemprop="name">NexT</span>
                   </a>
                 </span>
 
@@ -353,7 +393,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.6k
+                  2.6k
                 </span>
               
 
@@ -369,7 +409,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  12
                 </span>
               
             </div>
@@ -520,6 +560,52 @@
 <p>4.在站点的 _config.yml 下添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-haruto</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
 
+<h2 id="点击桃心效果"><a href="#点击桃心效果" class="headerlink" title="点击桃心效果"></a>点击桃心效果</h2><p><strong>1.</strong>在<code>/themes/next/source/js/love.js</code>下新建文件<code>love.js</code>，接着把该链接下的代码拷贝粘贴到<code>love.js</code>文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!function (e, t, a) &#123; function n() &#123; c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;), o(), r() &#125; function r() &#123; for (var e = 0; e &lt; d.length; e++)d[e].alpha &lt;= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y-- , d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = &quot;left:&quot; + d[e].x + &quot;px;top:&quot; + d[e].y + &quot;px;opacity:&quot; + d[e].alpha + &quot;;transform:scale(&quot; + d[e].scale + &quot;,&quot; + d[e].scale + &quot;) rotate(45deg);background:&quot; + d[e].color + &quot;;z-index:99999&quot;); requestAnimationFrame(r) &#125; function o() &#123; var t = &quot;function&quot; == typeof e.onclick &amp;&amp; e.onclick; e.onclick = function (e) &#123; t &amp;&amp; t(), i(e) &#125; &#125; function i(e) &#123; var a = t.createElement(&quot;div&quot;); a.className = &quot;heart&quot;, d.push(&#123; el: a, x: e.clientX - 5, y: e.clientY - 5, scale: 1, alpha: 1, color: s() &#125;), t.body.appendChild(a) &#125; function c(e) &#123; var a = t.createElement(&quot;style&quot;); a.type = &quot;text/css&quot;; try &#123; a.appendChild(t.createTextNode(e)) &#125; catch (t) &#123; a.styleSheet.cssText = e &#125; t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a) &#125; function s() &#123; return &quot;rgb(&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;)&quot; &#125; var d = []; e.requestAnimationFrame = function () &#123; return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) &#123; setTimeout(e, 1e3 / 60) &#125; &#125;(), n() &#125;(window, document);</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.</strong>在<code>\themes\next\layout\_layout.swig</code>文件<strong>末尾</strong>添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h2><p><strong>安装插件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search</span><br><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></table></figure>
+
+<p><strong>修改站点配置文件</strong>_config.yml 添加下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<p><strong>配置next主题上的搜索入口</strong></p>
+<p>修改Next主题配置文件config.yml，打开local search:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改nexT-Pisces主题内容区宽度"><a href="#修改nexT-Pisces主题内容区宽度" class="headerlink" title="修改nexT Pisces主题内容区宽度"></a>修改nexT Pisces主题内容区宽度</h2><p>在<code>source/css/_schemes/Picses/_layout.styl</code>文件末尾添加如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">// 以下为新增代码！！</span><br><span class="line"></span><br><span class="line">// 宽了窄了改下面数值 1200px 1000px</span><br><span class="line">$white_max_width = 1100px</span><br><span class="line"></span><br><span class="line">header&#123;</span><br><span class="line">  width: 90% !important;</span><br><span class="line">  max-width: $white_max_width;</span><br><span class="line">&#125;</span><br><span class="line">header.post-header &#123;</span><br><span class="line">  width: auto !important;</span><br><span class="line">&#125;</span><br><span class="line">.container .main-inner &#123;</span><br><span class="line">  width: 90%;</span><br><span class="line">  max-width: $white_max_width;</span><br><span class="line">&#125;</span><br><span class="line">.content-wrap &#123; width: calc(100% - 260px); &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.header &#123;</span><br><span class="line">  +tablet() &#123;</span><br><span class="line">    width: auto !important;</span><br><span class="line">  &#125;</span><br><span class="line">  +mobile() &#123;</span><br><span class="line">    width: auto !important;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.container .main-inner &#123;</span><br><span class="line">  +tablet() &#123;</span><br><span class="line">    width: auto !important;</span><br><span class="line">  &#125;</span><br><span class="line">  +mobile() &#123;</span><br><span class="line">    width: auto !important;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.content-wrap &#123;</span><br><span class="line">  +tablet() &#123;</span><br><span class="line">    width: 100% !important;</span><br><span class="line">  &#125;</span><br><span class="line">  +mobile() &#123;</span><br><span class="line">    // 为了在手机访问时，内边距不至于太大</span><br><span class="line">    padding: 0 !important;</span><br><span class="line">    width: 100% !important;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="首页文章部分显示"><a href="#首页文章部分显示" class="headerlink" title="首页文章部分显示"></a>首页文章部分显示</h2><p>首页显示的文章列表，每一遍都是全文，不方便概览。</p>
+<p>打开主题配置文件 _config.yml文件，搜索 “auto_excerpt”，enable改为true</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommand.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
+
+<h2 id="顶部加载进度条"><a href="#顶部加载进度条" class="headerlink" title="顶部加载进度条"></a>顶部加载进度条</h2><p>主题配置文件  _config.yml文件，搜索pace，改为true</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改网站背景"><a href="#修改网站背景" class="headerlink" title="修改网站背景"></a>修改网站背景</h2><p>1.修改网页背景色</p>
+<p>打开 themes\next\source\css_custom\custom.styl文件，添加下列代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    background-color: #EEEEEE;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.网页添加背景图片，添加如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    background-image:url(/images/background.jpg);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">	  background-size: 100% 100%;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改文章间距"><a href="#修改文章间距" class="headerlink" title="修改文章间距"></a>修改文章间距</h2><p>打开 themes\next\source\css_custom\custom.styl,添加下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 主页文章添加阴影效果</span><br><span class="line">.posts-expand &#123;</span><br><span class="line">        .post &#123;</span><br><span class="line">            margin-top: -30px;</span><br><span class="line">            margin-bottom: 50px;</span><br><span class="line">            padding: 25px;</span><br><span class="line">            -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">            -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改选中字符颜色"><a href="#修改选中字符颜色" class="headerlink" title="修改选中字符颜色"></a>修改选中字符颜色</h2><p>打开 themes\next\source\css_custom\custom.styl,添加下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 修改选中字符的颜色</span><br><span class="line">/* webkit, opera, IE9 */</span><br><span class="line">::selection &#123;</span><br><span class="line">    background: #00c4b6;</span><br><span class="line">    color: #f7f7f7;</span><br><span class="line">&#125;</span><br><span class="line">/* firefox */</span><br><span class="line">::-moz-selection &#123;</span><br><span class="line">    background: #00c4b6;</span><br><span class="line">    color: #f7f7f7;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="侧边栏社交小图标设置"><a href="#侧边栏社交小图标设置" class="headerlink" title="侧边栏社交小图标设置"></a>侧边栏社交小图标设置</h2><p>打开主题配置文件（<code>_config.yml</code>），搜索<code>social_icons:</code>,在<a href="http://fontawesome.io/icons/" target="_blank" rel="noopener">图标库</a>找自己喜欢的小图标，按如下格式    “||” 前面为链接   后面为   图标名称</p>
+<img src="/2019/07/05/next美化/007.png" title="例图">
+
+
+
+
+
 <h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="图片插入博客无法显示问题"><a href="#图片插入博客无法显示问题" class="headerlink" title="图片插入博客无法显示问题"></a>图片插入博客无法显示问题</h3><p><strong>踩的坑</strong></p>
 <p>在摸索出正确的方法前，踩了不少的坑</p>
 <p>1.插件版本安装错误（正确的插入也无法显示）</p>
@@ -536,6 +622,10 @@
 
 <h3 id="Deployer-not-found-git"><a href="#Deployer-not-found-git" class="headerlink" title="Deployer not found: git"></a>Deployer not found: git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>遇到了很多问题</p>
+<p>我们走在前人的道路上</p>
+<p><a href="https://segmentfault.com/a/1190000009544924#articleHeader3" target="_blank" rel="noopener"><a href="https://segmentfault.com/u/juli_590dd17068b9e" target="_blank" rel="noopener"><strong>Moorez</strong></a></a></p>
+<p><a href="https://blog.csdn.net/u012294515/article/details/83094693#_846" target="_blank" rel="noopener">Xyu_a</a></p>
 
       
     </div>
@@ -686,6 +776,16 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/user/home?id=442614011" target="_blank" title="云音乐">
+                      
+                        <i class="fa fa-fw fa-headphones"></i>云音乐</a>
+                  </span>
+                
+            </div>
+          
 
 
 
@@ -717,7 +817,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启-动态背景"><span class="nav-number">1.</span> <span class="nav-text">开启 动态背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置菜单栏"><span class="nav-number">2.</span> <span class="nav-text">配置菜单栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-分类及标签及关于页面"><span class="nav-number">3.</span> <span class="nav-text">添加  分类及标签及关于页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">3.1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签"><span class="nav-number">3.2.</span> <span class="nav-text">标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于"><span class="nav-number">3.3.</span> <span class="nav-text">关于</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给next主题加首歌"><span class="nav-number">4.</span> <span class="nav-text">给next主题加首歌</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何给next博客添加图片"><span class="nav-number">5.</span> <span class="nav-text">如何给next博客添加图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加侧边栏头像"><span class="nav-number">6.</span> <span class="nav-text">添加侧边栏头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能"><span class="nav-number">7.</span> <span class="nav-text">实现统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给自己的博客添加萌宠或者萌妹子"><span class="nav-number">8.</span> <span class="nav-text">给自己的博客添加萌宠或者萌妹子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题汇总"><span class="nav-number">9.</span> <span class="nav-text">问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片插入博客无法显示问题"><span class="nav-number">9.1.</span> <span class="nav-text">图片插入博客无法显示问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deployer-not-found-git"><span class="nav-number">9.2.</span> <span class="nav-text">Deployer not found: git</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启-动态背景"><span class="nav-number">1.</span> <span class="nav-text">开启 动态背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置菜单栏"><span class="nav-number">2.</span> <span class="nav-text">配置菜单栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-分类及标签及关于页面"><span class="nav-number">3.</span> <span class="nav-text">添加  分类及标签及关于页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">3.1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签"><span class="nav-number">3.2.</span> <span class="nav-text">标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于"><span class="nav-number">3.3.</span> <span class="nav-text">关于</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给next主题加首歌"><span class="nav-number">4.</span> <span class="nav-text">给next主题加首歌</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何给next博客添加图片"><span class="nav-number">5.</span> <span class="nav-text">如何给next博客添加图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加侧边栏头像"><span class="nav-number">6.</span> <span class="nav-text">添加侧边栏头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能"><span class="nav-number">7.</span> <span class="nav-text">实现统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给自己的博客添加萌宠或者萌妹子"><span class="nav-number">8.</span> <span class="nav-text">给自己的博客添加萌宠或者萌妹子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击桃心效果"><span class="nav-number">9.</span> <span class="nav-text">点击桃心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加搜索功能"><span class="nav-number">10.</span> <span class="nav-text">添加搜索功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改nexT-Pisces主题内容区宽度"><span class="nav-number">11.</span> <span class="nav-text">修改nexT Pisces主题内容区宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章部分显示"><span class="nav-number">12.</span> <span class="nav-text">首页文章部分显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#顶部加载进度条"><span class="nav-number">13.</span> <span class="nav-text">顶部加载进度条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改网站背景"><span class="nav-number">14.</span> <span class="nav-text">修改网站背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章间距"><span class="nav-number">15.</span> <span class="nav-text">修改文章间距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改选中字符颜色"><span class="nav-number">16.</span> <span class="nav-text">修改选中字符颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交小图标设置"><span class="nav-number">17.</span> <span class="nav-text">侧边栏社交小图标设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题汇总"><span class="nav-number">18.</span> <span class="nav-text">问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片插入博客无法显示问题"><span class="nav-number">18.1.</span> <span class="nav-text">图片插入博客无法显示问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deployer-not-found-git"><span class="nav-number">18.2.</span> <span class="nav-text">Deployer not found: git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢"><span class="nav-number">19.</span> <span class="nav-text">感谢</span></a></li></ol></div>
             
 
           </div>
@@ -738,13 +838,21 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Han Kii</span>
 
   
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
 </div>
 
 
@@ -805,8 +913,6 @@
   
 
 
-  
-
 
 
 
@@ -845,11 +951,6 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -920,6 +1021,323 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -941,3 +1359,5 @@
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
