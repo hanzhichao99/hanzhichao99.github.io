@@ -101,7 +101,8 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/005.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/006.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/007.png">
-<meta property="og:updated_time" content="2019-07-06T09:16:47.204Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/05/next美化/008.png">
+<meta property="og:updated_time" content="2019-07-06T09:29:38.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NexT主题美化(持续更新)">
 <meta name="twitter:description" content="开启 动态背景目前NexT主题最新的是V6.0版本，这个版本中可以有4种动态背景：  Canvas-nest        /最爱 three_waves canvas_lines canvas_sphere  设置方法也很简单，直接设置里需要的动态背景为true。 配置菜单栏站点配置blog/_config.yml文件的基本配置 1234567# Sitetitle: Alvabillsubti">
@@ -393,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.6k
+                  2.8k
                 </span>
               
 
@@ -409,7 +410,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12
+                  13
                 </span>
               
             </div>
@@ -605,6 +606,23 @@
 
 
 
+
+<h2 id="网站底部加上访问量"><a href="#网站底部加上访问量" class="headerlink" title="网站底部加上访问量"></a>网站底部加上访问量</h2><p>打开<code>\themes\next\layout\_partials\footer.swig</code>文件,在copyright前加上此代码（第一行）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后再合适的位置添加显示统计的代码（还是这个文件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;powered-by&quot;&gt;</span><br><span class="line">&lt;i class=&quot;fa fa-user-md&quot;&gt;&lt;/i&gt;&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">  本站访客数:&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="/2019/07/05/next美化/008.png" title="例图">
+
+<p><em>两中不同计算方式的统计代码</em></p>
+<ol>
+<li><strong>pv</strong>的方式，单个用户连续点击n篇文章，记录n次访问量</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line">    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​    2.<strong>uv</strong>的方式，单个用户连续点击n篇文章，只记录1次访客数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">  本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="图片插入博客无法显示问题"><a href="#图片插入博客无法显示问题" class="headerlink" title="图片插入博客无法显示问题"></a>图片插入博客无法显示问题</h3><p><strong>踩的坑</strong></p>
 <p>在摸索出正确的方法前，踩了不少的坑</p>
@@ -817,7 +835,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启-动态背景"><span class="nav-number">1.</span> <span class="nav-text">开启 动态背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置菜单栏"><span class="nav-number">2.</span> <span class="nav-text">配置菜单栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-分类及标签及关于页面"><span class="nav-number">3.</span> <span class="nav-text">添加  分类及标签及关于页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">3.1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签"><span class="nav-number">3.2.</span> <span class="nav-text">标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于"><span class="nav-number">3.3.</span> <span class="nav-text">关于</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给next主题加首歌"><span class="nav-number">4.</span> <span class="nav-text">给next主题加首歌</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何给next博客添加图片"><span class="nav-number">5.</span> <span class="nav-text">如何给next博客添加图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加侧边栏头像"><span class="nav-number">6.</span> <span class="nav-text">添加侧边栏头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能"><span class="nav-number">7.</span> <span class="nav-text">实现统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给自己的博客添加萌宠或者萌妹子"><span class="nav-number">8.</span> <span class="nav-text">给自己的博客添加萌宠或者萌妹子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击桃心效果"><span class="nav-number">9.</span> <span class="nav-text">点击桃心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加搜索功能"><span class="nav-number">10.</span> <span class="nav-text">添加搜索功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改nexT-Pisces主题内容区宽度"><span class="nav-number">11.</span> <span class="nav-text">修改nexT Pisces主题内容区宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章部分显示"><span class="nav-number">12.</span> <span class="nav-text">首页文章部分显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#顶部加载进度条"><span class="nav-number">13.</span> <span class="nav-text">顶部加载进度条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改网站背景"><span class="nav-number">14.</span> <span class="nav-text">修改网站背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章间距"><span class="nav-number">15.</span> <span class="nav-text">修改文章间距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改选中字符颜色"><span class="nav-number">16.</span> <span class="nav-text">修改选中字符颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交小图标设置"><span class="nav-number">17.</span> <span class="nav-text">侧边栏社交小图标设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题汇总"><span class="nav-number">18.</span> <span class="nav-text">问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片插入博客无法显示问题"><span class="nav-number">18.1.</span> <span class="nav-text">图片插入博客无法显示问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deployer-not-found-git"><span class="nav-number">18.2.</span> <span class="nav-text">Deployer not found: git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢"><span class="nav-number">19.</span> <span class="nav-text">感谢</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启-动态背景"><span class="nav-number">1.</span> <span class="nav-text">开启 动态背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置菜单栏"><span class="nav-number">2.</span> <span class="nav-text">配置菜单栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-分类及标签及关于页面"><span class="nav-number">3.</span> <span class="nav-text">添加  分类及标签及关于页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">3.1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签"><span class="nav-number">3.2.</span> <span class="nav-text">标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于"><span class="nav-number">3.3.</span> <span class="nav-text">关于</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给next主题加首歌"><span class="nav-number">4.</span> <span class="nav-text">给next主题加首歌</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何给next博客添加图片"><span class="nav-number">5.</span> <span class="nav-text">如何给next博客添加图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加侧边栏头像"><span class="nav-number">6.</span> <span class="nav-text">添加侧边栏头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现统计功能"><span class="nav-number">7.</span> <span class="nav-text">实现统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给自己的博客添加萌宠或者萌妹子"><span class="nav-number">8.</span> <span class="nav-text">给自己的博客添加萌宠或者萌妹子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击桃心效果"><span class="nav-number">9.</span> <span class="nav-text">点击桃心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加搜索功能"><span class="nav-number">10.</span> <span class="nav-text">添加搜索功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改nexT-Pisces主题内容区宽度"><span class="nav-number">11.</span> <span class="nav-text">修改nexT Pisces主题内容区宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章部分显示"><span class="nav-number">12.</span> <span class="nav-text">首页文章部分显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#顶部加载进度条"><span class="nav-number">13.</span> <span class="nav-text">顶部加载进度条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改网站背景"><span class="nav-number">14.</span> <span class="nav-text">修改网站背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章间距"><span class="nav-number">15.</span> <span class="nav-text">修改文章间距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改选中字符颜色"><span class="nav-number">16.</span> <span class="nav-text">修改选中字符颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交小图标设置"><span class="nav-number">17.</span> <span class="nav-text">侧边栏社交小图标设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部加上访问量"><span class="nav-number">18.</span> <span class="nav-text">网站底部加上访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题汇总"><span class="nav-number">19.</span> <span class="nav-text">问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片插入博客无法显示问题"><span class="nav-number">19.1.</span> <span class="nav-text">图片插入博客无法显示问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deployer-not-found-git"><span class="nav-number">19.2.</span> <span class="nav-text">Deployer not found: git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢"><span class="nav-number">20.</span> <span class="nav-text">感谢</span></a></li></ol></div>
             
 
           </div>
@@ -849,9 +867,14 @@
   
 </div>
 
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共3.3k字</span>
+</div>
+
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_pv"></span>
+  总访客数:<span id="busuanzi_value_site_uv"></span>
 </span>
 </div>
 
