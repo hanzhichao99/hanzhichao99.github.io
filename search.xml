@@ -4,16 +4,22 @@
     <title><![CDATA[选择排序]]></title>
     <url>%2F2019%2F09%2F24%2F%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%2F</url>
     <content type="text"><![CDATA[最近学习算法，从一些经典的排序算法开始。 这篇讲的是我对选择排序的一些心得 选择排序：来源百度百科： 选择排序(Selection sort)是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小(或最大)的一个元素，存放在序列的起始(末尾)位置，直到全部待排序的数据元素排完。选择排序是不稳定的排序方法（比如序列[5， 5， 3]第一次就将第一个[5]与[3]交换，导致第一个5挪动到第二个5后面）。 上面提到了选择排序是不稳定的排序方法 判断某排序算法是否稳定，我们可以简单理解成：排序前2个相等的数其在序列的前后位置顺序和排序后它们两个的前后位置顺序相同 如果相同，则是稳定的排序方法。 如果不相同，则是不稳定的排序方法 思路：​ 每一次从待排序的元素中，选出最大（或最小）元素，放在集合的末尾（起始）位置。直到集合有序 ​ 当只有一个数时，则不需要选择了，因此需要n-1趟排序，比如10个数，需要9趟排序 ​ 每次排序过后，比较次数减一。比如第一趟需要比较九次。第二趟则需要比较八次。 代码实现思路：​ 双重for循环。外层控制循环趟数。内层循环找到当前趟数的最大值，随后与当前趟数最后一位元素交换。 ​ 如：数组array共有10个元素 ​ 第一趟排序选择第1个元素（array[0]），与后面9个元素比较。得到当前趟数最大值下标。 ​ 与当前趟数最后一位元素（array[9]）交换。 ​ 第二趟排序选择第1个元素（array[0]），与后面8个元素比较。得到当前趟数最大值下标。 ​ 与当前趟数最后一位元素（array[8]）交换。 ​ 123456789101112131415161718//选择排序public static void quickSort(int[] array)&#123; int temp ;//中间变量，交换值时使用 for(int i=0;i&lt;array.length-1;i++)&#123;//外层循环控制需要排序的趟数 int pos=0;//新的趟数、将角标重新赋值为0 for(int j=0;j&lt;array.length-i;j++)&#123;//内层循环控制比较的次数 if(array[j]&gt;array[pos])&#123; pos=j;//获取较大值的下标 &#125; &#125; //获取的最大值放在数组末尾 temp=array[array.length-i-1]; array[array.length-i-1]=array[pos]; array[pos]=temp; &#125; &#125; 参考资料： []: https://segmentfault.com/a/1190000014008568]]></content>
+      <categories>
+        <category>排序算法</category>
+      </categories>
       <tags>
-        <tag>排序算法</tag>
+        <tag>选择排序</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[冒泡排序]]></title>
     <url>%2F2019%2F09%2F24%2F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%2F</url>
     <content type="text"><![CDATA[最近学习算法，从一些经典的排序算法开始。 这篇讲的是我对冒泡排序的一些心得 冒泡排序：来源百度百科： 冒泡排序（Bubble Sort，台湾译为：泡沫排序或气泡排序）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越大的元素会经由交换慢慢“浮”到数列的顶端，故名。 思路：​ 两两交换，大的放在后面。第一次排序之后最大值在数组末尾 ​ 因为是两两交换，所以排序次数为n-1，比如10个数，需要9趟排序 ​ 每趟过后，比较次数减1 代码实现思路：​ 双重for循环，外层循环控制排序的趟数，内层循环控制比较的次数 12345678910111213//冒泡排序public static void bubbleSort(int[] array)&#123; int temp ;//中间变量 for(int i=0;i&lt;array.length-1;i++)&#123;//外层循环控制排序趟数 for(int j=0;j&lt;array.length-1-i;j++)&#123;//内层循环控制比较次数，每趟过后次数减一 if(array[j]&gt;array[j+1])&#123;//两两交换，大的放后面 temp=array[j+1]; array[j+1]=array[j]; array[j]=temp; &#125; &#125; &#125; &#125; 参考资料： []: https://segmentfault.com/a/1190000014008568]]></content>
+      <categories>
+        <category>排序算法</category>
+      </categories>
       <tags>
-        <tag>排序算法</tag>
+        <tag>冒泡排序</tag>
       </tags>
   </entry>
   <entry>
@@ -35,7 +41,7 @@
         <category>NexT</category>
       </categories>
       <tags>
-        <tag>next美化</tag>
+        <tag>Next主题配置</tag>
       </tags>
   </entry>
   <entry>
@@ -46,7 +52,7 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>hexo设置</tag>
       </tags>
   </entry>
   <entry>
